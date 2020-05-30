@@ -45,7 +45,7 @@ _Have an idea for our website? You can drop a suggestion in our [Discord server]
     You should see a message in the terminal like this:
 
     ```shell
-    You can now view gatsby-starter-default in the browser.
+    You can now view search in the browser.
     ⠀
       http://localhost:8000/
     ⠀

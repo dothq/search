@@ -1,2 +1,0 @@
-Contact: mailto:vulnerabilities@dothq.co
-Policy: https://github.com/dothq/search/blob/master/SECURITY.md

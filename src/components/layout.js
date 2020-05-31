@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle />
       <Sidebar enabled={sidebarVisible} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
@@ -49,6 +48,7 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <News />
+      <GlobalStyle />
     </>
   )
 }

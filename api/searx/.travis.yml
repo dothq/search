@@ -1,0 +1,57 @@
+os: linux
+dist: bionic
+language: python
+cache:
+  - directories:
+    - $HOME/.cache/pip
+addons:
+  firefox: "latest"
+
+install:
+  - env
+  - which python; python --version
+  - make V=1 install
+  - make V=1 gecko.driver
+  - make V=1 node.env
+  - make V=1 travis.codecov
+script:
+  - make V=1 themes
+  - make V=1 test
+after_success:
+  - make V=1 test.coverage
+  - codecov
+
+stages:
+  - test
+  - name: docker
+    if: branch = master AND type != pull_request AND env(DOCKER_USERNAME) IS present
+
+jobs:
+  include:
+    - python: "2.7"
+      env: PY=2
+    - python: "3.5"
+    - python: "3.6"
+    - python: "3.7"
+    - python: "3.8"
+    - stage: docker
+      python: "3.8"
+      git:
+        depth: false
+      services:
+        - docker
+      addons: []
+      before_install: true
+      install: true
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - make -e GIT_URL=$(git remote get-url origin) docker.push
+      after_success: true
+
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#searx"
+    template:
+      - "%{repository}/#%{build_number}/%{branch} (%{author}): %{message} %{build_url}"
+    on_success: change

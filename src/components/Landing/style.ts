@@ -12,7 +12,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: calc(100vh - 872px);
+    transform-y: translate(-50%, -50%); 
 `;
 
 export const Logo = styled.div`

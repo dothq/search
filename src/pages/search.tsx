@@ -8,7 +8,7 @@ const SearchResultsPage = ({ location }) => {
     const [title, setTitle] = React.useState(`- Dot Search`)
 
     React.useState(() => {
-        if(location) {
+        if(typeof(window) !== "undefined" && location) {
             const parsed = parse(location.href);
 
             setTitle((parsed.q as string) || "")

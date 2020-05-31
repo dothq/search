@@ -24,7 +24,7 @@ import { CoverSheet } from "./Sidebar/style";
 
 const GlobalStyle = createGlobalStyle`${Style}`;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isLanding }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
   })
 
   return (
-    <>
+    <div style={{ backgroundImage: isLanding ? `url(${bg})` : `` }} className={"landing-hero"}>
       <CoverSheet visible={sidebarVisible} onClick={() => setSidebarVisible(false)} />
       <Sidebar enabled={sidebarVisible} />
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -65,12 +65,13 @@ const Layout = ({ children }) => {
       </div>
       <News />
       <GlobalStyle />
-    </>
+    </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isLanding: PropTypes.bool
 }
 
 export default Layout

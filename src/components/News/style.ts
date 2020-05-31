@@ -8,7 +8,7 @@ export const StyledNews = styled.div`
     bottom: 0;
     border-top: 1px solid #b8b8b8;
     font-size: 15px;
-    background-color: #ffffffe6;
+    background-color: #ffffffc4;
     backdrop-filter: blur(10px);
 `;
 

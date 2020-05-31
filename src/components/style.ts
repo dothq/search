@@ -637,6 +637,13 @@ export const Style = css`
     a {
         text-decoration: none;
     }
+
+    .landing-hero {
+        background-size: cover;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 `;
 
 export const IndexStyle = css`

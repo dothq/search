@@ -1,0 +1,126 @@
+Searx was created by Adam Tauber and is maintained by Adam Tauber, Alexandre Flament, Noémi Ványi, @pofilo and Markus Heiser.
+
+Major contributing authors:
+
+- Adam Tauber <asciimoo@gmail.com> `@asciimoo <https://github.com/asciimoo>`_
+- Matej Cotman
+- Thomas Pointhuber
+- Alexandre Flament `@dalf <https://github.com/dalf>`_
+- @Cqoicebordel
+- Noémi Ványi
+- Marc Abonce Seguin @a01200356
+- @pofilo
+- Markus Heiser @return42
+
+People who have submitted patches/translates, reported bugs, consulted features or
+generally made searx better:
+
+- Laszlo Hammerl
+- Stefan Marsiske
+- Gabor Nagy
+- @pw3t
+- @rhapsodhy
+- András Veres-Szentkirályi
+- Benjamin Sonntag
+- @HLFH
+- @TheRadialActive
+- @Okhin
+- André Koot
+- Alejandro León Aznar
+- rike
+- dp
+- Martin Zimmermann
+- @courgette
+- @kernc
+- @Reventl0v
+- Caner Başaran
+- Benjamin Sonntag
+- @opi
+- @dimqua
+- Giorgos Logiotatidis
+- Luc Didry
+- Niklas Haas
+- @underr
+- Emmanuel Benazera
+- @GreenLunar
+- Kang-min Liu
+- Kirill Isakov
+- Guilhem Bonnefille
+- @jibe-b
+- Christian Pietsch @pietsch
+- @Maxqia
+- Ashutosh Das @pyprism
+- YuLun Shih @imZack
+- Dmitry Mikhirev @mikhirev
+- David A Roberts `@davidar <https://github.com/davidar>`_
+- Jan Verbeek @blyxxyz
+- Ammar Najjar @ammarnajjar
+- @stepshal
+- François Revol @mmuman
+- Harry Wood @harry-wood
+- Thomas Renard @threnard
+- Pydo `<https://github.com/pydo>`_
+- Athemis `<https://github.com/Athemis>`_
+- Stefan Antoni `<http://stefan.antoni.io>`
+- @firebovine
+- Lorenzo J. Lucchini @luccoj
+- @eig8phei
+- Joachim Cherqui
+- @maxigas
+- Jannik Winkel @kiney
+- @juanitobananas
+- Vache Asatryan @vachi
+- Luca CPZ @lcpz
+- @nikaiw
+- Thirnearez
+- Hypolite Petovan @MrPetovan
+- @woorst
+- @Apply55gx
+- @pyrrh0n1c
+- @cclauss
+- QGW @moon2l
+- Pierre-Alain Toret @daftaupe
+- Matthew Olmsted @icegiant
+- Michael Tran @trankmichael
+- Joseph Nuthalapati @josephkiranbabu
+- @maiki
+- Richard Didier @zeph33
+- Michael Vieria @Themimitoof
+- Richard Nespithal @rndevfx
+- Stanislas @angristan
+- @rinpatch
+- g. s. @usernameisntallowed
+- Léo Bourrel @bourrel
+- @cy8aer
+- @Popolon
+- Alice Ferrazzi @aliceinwire
+- @LiquidLemon
+- @dadosch
+- @Venca24
+- @ZEROF
+- Ivan Skytte Jørgensen @isj-privacore
+- @miicha
+- Étienne Deparis @milouse
+- @pelag0s
+- Denis Wernert @d-tux
+- Robin Hallabro-Kokko @hallabro
+- Jonas Zohren @jfowl
+- Elias Ojala @theel0ja
+- @brunob
+- Nick Espig @nachtalb
+- Rachmadani Haryono @rachmadaniHaryono
+- Frank de Lange @yetangitu
+- Émilien Devos @unifox
+- Nicolas Gelot @nfk
+- @volth
+- Mathieu Brunot @madmath03
+- @lorddavidiii
+- @x250
+- Robby O'Connor @robbyoconnor
+- Finn @0xhtml
+- @tmikaeld
+- @hobbestigrou
+- Vipul @finn0
+- @CaffeinatedTech
+- Robin Schneider @ypid
+- @splintah

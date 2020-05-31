@@ -7,7 +7,7 @@ import { IconButton, Button } from '../Button';
 
 import { useGlobalState } from '../../context'
 
-export const Header = () => {
+export const Header = ({ siteTitle }) => {
     const [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
 
     return (

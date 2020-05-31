@@ -640,7 +640,5 @@ export const Style = css`
 `;
 
 export const IndexStyle = css`
-    html {
-        background-image: url(https://source.unsplash.com/collection/568833/1920x1080)
-    }
+
 `;

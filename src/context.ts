@@ -1,4 +1,4 @@
 import { createGlobalState } from 'react-hooks-global-state';
  
-const initialState = { sidebarVisible: false, logoClicks: -1, news: undefined };
+const initialState = { sidebarVisible: false, news: undefined, bg: undefined };
 export const { useGlobalState } = createGlobalState(initialState);

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { LinkItem, a } from './style'
 
-export const Item = ({ href, children }: {href?: string, children: any}) => (
-  <Link to={href}>
-      <LinkItem>{children}</LinkItem>
+export const Item = ({ href, children, onClick, style }: { href?: string, children: any; onClick?: any; style?: any }) => (
+  <Link to={href} onClick={onClick}>
+      <LinkItem style={style}>{children}</LinkItem>
   </Link>
 )

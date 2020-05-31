@@ -10,12 +10,21 @@ import { IndexStyle } from "../components/style"
 
 const GlobalStyle = createGlobalStyle`${IndexStyle}`;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <GlobalStyle />
-    <Landing />
-  </Layout>
-)
+import { useGlobalState } from '../context'
+  
+
+const IndexPage = () => {
+  const [bg, setBG] = useGlobalState('bg')
+
+  document.documentElement.style.backgroundImage = `url(${bg})`
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <GlobalStyle />
+      <Landing />
+    </Layout>
+  )
+}
 
 export default IndexPage

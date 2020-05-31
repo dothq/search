@@ -10,6 +10,11 @@ export const LinkItem = styled.div`
   a:hover, a:visited, a:link, a:active {
     text-decoration: none;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
   text-decoration: none !important;
   border: none;
 `;

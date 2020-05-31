@@ -8,16 +8,6 @@ import { useGlobalState } from '../../context'
 import { navigate } from 'gatsby';
 
 export const Landing = () => {
-    let [logoClicksCount, setLogoClicksCount] = useGlobalState('logoClicks')
-
-    const onLogoClick = () => {
-        if(logoClicksCount == 0) {
-            return setLogoClicksCount(-1)
-        }
-
-        setLogoClicksCount(++logoClicksCount)
-    }
-
     const onSearch = () => {
         const sb = (document.getElementById("sb") as HTMLInputElement)
         
@@ -35,7 +25,7 @@ export const Landing = () => {
     return (
         <StyledLanding>
             <Container>
-                <Logo onClick={onLogoClick} animate={logoClicksCount == 0} />
+                <Logo />
                 <Searchbox 
                     placeholder={""} 
                     title={"Search"}

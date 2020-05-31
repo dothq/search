@@ -17,7 +17,10 @@ import { Style } from './style';
 
 import { useGlobalState } from '../context'
 
+import axios from 'axios';
+
 import { createGlobalStyle } from 'styled-components';
+import { CoverSheet } from "./Sidebar/style";
 
 const GlobalStyle = createGlobalStyle`${Style}`;
 
@@ -32,10 +35,23 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [sidebarVisible] = useGlobalState('sidebarVisible')
+  const [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
+  const [bg, setBG] = useGlobalState('bg')
+
+  React.useState(() => {
+    if(bg !== undefined) return;
+
+    axios.get('https://source.unsplash.com/random/1920x1080)', { responseType: 'arraybuffer', maxRedirects: 0 })
+      .then(res => {
+        const blob = new Blob([res.data]);
+        const data = URL.createObjectURL(blob);
+        setBG(data)
+      })
+  })
 
   return (
     <>
+      <CoverSheet visible={sidebarVisible} onClick={() => setSidebarVisible(false)} />
       <Sidebar enabled={sidebarVisible} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div

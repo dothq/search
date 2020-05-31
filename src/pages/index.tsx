@@ -16,7 +16,7 @@ import { useGlobalState } from '../context'
 const IndexPage = () => {
   const [bg, setBG] = useGlobalState('bg')
 
-  document.documentElement.style.backgroundImage = `url(${bg})`
+  if(typeof(window) !== "undefined") document.documentElement.style.backgroundImage = `url(${bg})`
 
   return (
     <Layout>

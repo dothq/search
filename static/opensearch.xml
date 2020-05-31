@@ -1,0 +1,15 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Dot Search</ShortName>
+  <Description>From the makers of Dot Browser: Dot Search. A simple, privacy-centric search engine with zero ads or trackers.</Description>
+  <InputEncoding>UTF-*</InputEncoding>
+  <Image width="32" height="32" type="image/png">https://search.dothq.co/favicon-32x32.png</Image>
+  <Url type="text/html" template="https://search.dothq.co/search">
+    <Param name="q" value="{searchTerms}"/>
+  </Url>
+  <!--
+    Used for suggestions
+
+  <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
+  -->
+</OpenSearchDescription>

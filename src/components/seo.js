@@ -68,6 +68,14 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          rel: 'search',
+          type: 'application/opensearchdescription+xml',
+          title: 'Dot Search',
+          href: '/opensearch.xml'
+        },
+      ]}
     />
   )
 }

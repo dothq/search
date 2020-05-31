@@ -13,6 +13,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     transform-y: translate(-50%, -50%); 
+    align-self: center;
 `;
 
 export const Logo = styled.div`

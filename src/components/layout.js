@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           padding: `0px 32px`,
+          marginTop: '-72px'
         }}
       >
         {children}

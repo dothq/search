@@ -9,7 +9,7 @@ export const IconButton = styled.div`
     border-radius: 2px;
 
     &:hover {
-        background-color: #eeeeee;
+        background-color: #eeeeee2b;
     }
 
     ${({ size }: { size: number }) => css`
@@ -27,4 +27,10 @@ export const Button = styled.div`
     font-size: 15px;
     cursor: pointer;
     user-select: none;
+
+    transition: 0.3s box-shadow;
+
+    &:hover {
+        box-shadow: 0 0 15px 8px #00000026;
+    }
 `;

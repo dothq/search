@@ -3,19 +3,27 @@ import styled, { css } from "styled-components";
 export const StyledSidebar = styled.div`
     z-index: 1;
     height: 100vh;
-    width: 20%;
+    width: 280px;
     overflow: hidden;
-    box-shadow: 0px 1px 30px rgba(0,0,0,0.25);
     position: fixed;
     background-color: white;
-    ${({ enabled }: { enabled: boolean}) => css`
-        display: ${enabled ? 'flex' : 'none'}
-    `
-}
+
+    transition: 0.15s transform, 0.15s box-shadow;
+    will-change: transform;
+    transition-timing-function: cubic-bezier(0.54, 0.01, 0, 0.99);
+
+    backdrop-filter: blur(100px);
+    background-color: #ffffff00;
+
+    ${({ enabled }: { enabled: boolean }) => css`
+        transform: ${enabled ? `translateX()` : `translateX(calc(-20% * 6))`};
+        box-shadow: 0px 1px 30px rgba(0,0,0,0.25)${enabled ? `, 1px 0px 0 11520px #0000007a` : ``};
+    `}
 `;
 
 export const SidebarContainer = styled.div`
     padding: 32px;
+    padding-top: 20px;
 `;
 
 export const Spacer = styled.div`
@@ -36,6 +44,6 @@ export const DarkModeToggle = styled.div`
     justify-content: center;
 
     &:hover {
-        background-color: #eeeeee;
+        background-color: #eeeeee2b;
     }
 `;

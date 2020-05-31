@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledLanding = styled.div`
     width: 100%;
@@ -21,15 +21,28 @@ export const Logo = styled.div`
     height: 72px;
     background-image: url(/icon.png);
     background-size: contain;
+
+    ${({ animate }: { animate: boolean }) => css`
+        animation: ${animate ? `0.3s spin` : ''};
+    `}
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0turn)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
 `;
 
 export const Searchbox = styled.input`
-    background: #FFFFFF;
+    background: #ffffffd1;
     box-shadow: 0px 1px 30px rgba(0,0,0,0.25);
-    border-radius: 8px;
+    border-radius: 4px;
     border: none;
     outline: none;
-    height: 38px;
+    height: 42px;
     width: 680px;
     margin-top: 88px;
     font-size: 14px;
@@ -38,5 +51,6 @@ export const Searchbox = styled.input`
     background-size: 16px;
     background-repeat: no-repeat;
     background-position-x: 12px;
-    background-position-y: 11px;
+    background-position-y: 12px;
+    backdrop-filter: blur(5px);
 `;

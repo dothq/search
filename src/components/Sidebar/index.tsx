@@ -6,26 +6,32 @@ import { IconButton } from '../Button';
 import { Icon } from '../Icon';
 import { Item } from '../Item';
 
-export const Sidebar = ({ enabled }: { enabled: boolean }) => (
-    <StyledSidebar enabled={enabled}>
-        <SidebarContainer>
-            <Flexy jc={"flex-start"}>
-                <IconButton size={32}>
-                    <Icon icon={"menu"} size={18} />
-                </IconButton>
-            </Flexy>
-            <Spacer />
-            <Item href={"#"}>About Dot Search</Item>
-            <Item href={"#"}>Privacy</Item>
-            <Item href={"#"}>Terms</Item>
-            <DarkModeToggle>
+import { useGlobalState } from '../../context'
+
+export const Sidebar = ({ enabled }: { enabled: boolean }) => {
+    const [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
+
+    return (
+        <StyledSidebar enabled={enabled}>
+            <SidebarContainer>
                 <Flexy jc={"flex-start"}>
-                    <IconButton size={32}>
-                        <Icon icon={"moon"} size={18} />
+                    <IconButton size={32} onClick={() => setSidebarVisible(!sidebarVisible)}>
+                        <Icon icon={"menu"} size={18} />
                     </IconButton>
                 </Flexy>
-                <Item href={"#"}>Toggle Night Theme</Item>
-            </DarkModeToggle>
-        </SidebarContainer>
-    </StyledSidebar>
-)
+                <Spacer />
+                <Item href={"/about"}>About Dot Search</Item>
+                <Item href={"/privacy"}>Privacy</Item>
+                <Item href={"/terms"}>Terms</Item>
+                <DarkModeToggle>
+                    <Flexy jc={"flex-start"}>
+                        <IconButton size={32}>
+                            <Icon icon={"moon"} size={18} />
+                        </IconButton>
+                    </Flexy>
+                    <Item href={"#"}>Toggle Night Theme</Item>
+                </DarkModeToggle>
+            </SidebarContainer>
+        </StyledSidebar>
+    )
+}

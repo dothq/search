@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;531;600;700;800;900&display=swap');
 
+:root {
+  --light: 80;
+  --threshold: 60;
+}
+
 html {
   font-family: 'Inter', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 body {
   margin: 0;
@@ -621,4 +629,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+a {
+  text-decoration: none;
 }

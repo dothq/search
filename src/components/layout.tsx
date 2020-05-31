@@ -63,7 +63,7 @@ const Layout = ({ children, isLanding }) => {
       >
         {children}
       </div>
-      <News />
+      {isLanding && <News />}
       <GlobalStyle />
     </div>
   )

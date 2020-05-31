@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { IconButton } from "../Button";
 
 export const StyledSidebar = styled.div`
     z-index: 1;
@@ -13,7 +14,7 @@ export const StyledSidebar = styled.div`
     transition-timing-function: cubic-bezier(0.54, 0.01, 0, 0.99);
 
     backdrop-filter: blur(100px);
-    background-color: #ffffff00;
+    background-color: #7b7b7b6e;
 
     ${({ enabled }: { enabled: boolean }) => css`
         transform: ${enabled ? `translateX()` : `translateX(calc(-20% * 6))`};
@@ -46,4 +47,10 @@ export const DarkModeToggle = styled.div`
     &:hover {
         background-color: #eeeeee2b;
     }
+`;
+
+export const SidebarIconButton = styled(IconButton)`
+    background-color: transparent;
+    box-shadow: none;
+    color: #fff;
 `;

@@ -4,11 +4,10 @@ export const LinkItem = styled.div`
   font-size: 14px;
   display: flex;
   margin-bottom: 2px;
-  color: black;
+  color: white;
   text-decoration: none !important;
 
-  a:hover, a:visited, a:link, a:active
-  {
+  a:hover, a:visited, a:link, a:active {
     text-decoration: none;
   }
   text-decoration: none !important;
@@ -16,8 +15,7 @@ export const LinkItem = styled.div`
 `;
 
 export const a = css`
-  a:hover, a:visited, a:link, a:active
-  {
+  a:hover, a:visited, a:link, a:active {
     text-decoration: none;
   }
   text-decoration: none !important;

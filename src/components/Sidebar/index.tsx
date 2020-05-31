@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledSidebar, SidebarContainer, Spacer, DarkModeToggle } from "./style";
+import { StyledSidebar, SidebarContainer, Spacer, DarkModeToggle, SidebarIconButton } from "./style";
 import { Flexy } from '../Flexy';
 import { IconButton } from '../Button';
 import { Icon } from '../Icon';
@@ -15,9 +15,9 @@ export const Sidebar = ({ enabled }: { enabled: boolean }) => {
         <StyledSidebar enabled={enabled}>
             <SidebarContainer>
                 <Flexy jc={"flex-start"}>
-                    <IconButton size={32} onClick={() => setSidebarVisible(!sidebarVisible)}>
+                    <SidebarIconButton size={32} onClick={() => setSidebarVisible(!sidebarVisible)}>
                         <Icon icon={"menu"} size={18} />
-                    </IconButton>
+                    </SidebarIconButton>
                 </Flexy>
                 <Spacer />
                 <Item href={"/about"}>About Dot Search</Item>
@@ -25,9 +25,9 @@ export const Sidebar = ({ enabled }: { enabled: boolean }) => {
                 <Item href={"/terms"}>Terms</Item>
                 <DarkModeToggle>
                     <Flexy jc={"flex-start"}>
-                        <IconButton size={32}>
+                        <SidebarIconButton size={32}>
                             <Icon icon={"moon"} size={18} />
-                        </IconButton>
+                        </SidebarIconButton>
                     </Flexy>
                     <Item href={"#"}>Toggle Night Theme</Item>
                 </DarkModeToggle>

@@ -5,12 +5,16 @@ import { Button } from '../Button';
 
 import axios from 'axios';
 
+import { useGlobalState } from '../../context'
+
 export const News = () => {
-    const [news, setNews] = React.useState([])
+    const [news, setNews] = useGlobalState('news')
 
     React.useState(() => {
-        axios.get('https://dothq.co/api/browser.news', { headers: { 'X-Dot-NTP': true } })
-            .then(res => setNews(res.data.articles))
+        if(news == undefined) {
+            axios.get('https://dothq.co/api/browser.news', { headers: { 'X-Dot-NTP': true } })
+                .then(res => setNews(res.data.articles))
+        }
     })
 
     return (

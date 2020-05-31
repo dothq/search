@@ -5,12 +5,15 @@ export const IconButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s background-color;
+    transition: 0.3s background-color, 0.2s opacity;
     border-radius: 2px;
     color: #000;
 
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,0.22) 0px 5px 10px;
+
     &:hover {
-        background-color: #eeeeee2b;
+        opacity: 0.75;
     }
 
     ${({ size }: { size: number }) => css`

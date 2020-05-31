@@ -6,6 +6,7 @@ import { Button } from '../Button';
 import axios from 'axios';
 
 import { useGlobalState } from '../../context'
+import { navigate } from 'gatsby';
 
 export const News = () => {
     const [news, setNews] = useGlobalState('news')
@@ -17,10 +18,16 @@ export const News = () => {
         }
     })
 
+    const loadArticle = (url) => {
+        if(typeof(window) !== "undefined") {
+            document.location.replace(url)
+        }
+    }
+
     return (
         <StyledNews>
             <Container style={{ display: 'block' }}>
-                <b>NEWS</b> {news && news[0] && news[0].title}
+                <b>NEWS</b> {news && news[0] && news[0].title} <a onClick={() => loadArticle(news && news[0] && news[0].url)} style={{ color: '#0E8BFF', cursor: 'pointer' }}>Learn more</a>
             </Container>
         </StyledNews>
     )

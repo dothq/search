@@ -21,6 +21,7 @@
     "react-helmet": "^6.0.0",
     "react-hooks-global-state": "^1.0.0",
     "react-transition-group": "^4.4.1",
+    "search-params": "^3.0.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

@@ -13,13 +13,15 @@ import { Header } from "./Header"
 import { Sidebar } from './Sidebar';
 import { News } from "./News"
 
-import Transition from "./Transition"
-
-import "./layout.css"
+import { Style } from './style';
 
 import { useGlobalState } from '../context'
 
-const Layout = ({ children, location }) => {
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`${Style}`;
+
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,6 +36,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Sidebar enabled={sidebarVisible} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
@@ -43,7 +46,7 @@ const Layout = ({ children, location }) => {
           marginTop: '-72px'
         }}
       >
-        <Transition location={location}>{children}</Transition>
+        {children}
       </div>
       <News />
     </>

@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
     width: 72px;
     height: 72px;
-    background-image: url(/icon.png);
+    background-image: url(/icon_light.png);
     background-size: contain;
 
     ${({ animate }: { animate: boolean }) => css`
@@ -53,4 +53,10 @@ export const Searchbox = styled.input`
     background-position-x: 12px;
     background-position-y: 12px;
     backdrop-filter: blur(5px);
+
+    transition: 0.3s transform;
+
+    &:focus {
+        transform: scale(1.025);
+    }
 `;

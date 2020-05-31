@@ -7,11 +7,7 @@ import { News } from '../News';
 import { useGlobalState } from '../../context'
 import { navigate } from 'gatsby';
 
-export const Landing = ({ location }) => {
-    if(!location) {
-        document.documentElement.style.backgroundImage = `url(https://source.unsplash.com/1920x1080?landscapes)`
-    }
-
+export const Landing = () => {
     let [logoClicksCount, setLogoClicksCount] = useGlobalState('logoClicks')
 
     const onLogoClick = () => {
@@ -25,7 +21,9 @@ export const Landing = ({ location }) => {
     const onSearch = () => {
         const sb = (document.getElementById("sb") as HTMLInputElement)
         
-        navigate(`/search?q=${sb.value}`, { replace: false })
+        if(sb.value.length == 0) return;
+
+        if(typeof(window) !== "undefined") window.location.href = `/search?q=${sb.value}`
     }
 
     const onKeyDown = (e) => {
@@ -40,6 +38,7 @@ export const Landing = ({ location }) => {
                 <Logo onClick={onLogoClick} animate={logoClicksCount == 0} />
                 <Searchbox 
                     placeholder={""} 
+                    title={"Search"}
                     id={"sb"} 
                     onKeyDown={() => onKeyDown(event)} 
                     autoCapitalize={"off"}
@@ -49,7 +48,7 @@ export const Landing = ({ location }) => {
                 />
                 <div style={{ marginTop: '44px', display: 'flex' }}>
                     <Button style={{ marginRight: '18px' }} onClick={onSearch}>Search</Button>
-                    <Button>Something random</Button>
+                    <Button>Surprise me</Button>
                 </div>
             </Container>
         </StyledLanding>

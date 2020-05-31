@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Dot Search`,
+    title: `Search`,
     description: `From the makers of Dot Browser: Dot Search. A simple, privacy-centric search engine with zero ads or trackers.`,
     author: `@dothq`,
   },

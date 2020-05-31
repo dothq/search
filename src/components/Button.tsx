@@ -7,6 +7,7 @@ export const IconButton = styled.div`
     justify-content: center;
     transition: 0.3s background-color;
     border-radius: 2px;
+    color: #fff;
 
     &:hover {
         background-color: #eeeeee2b;
@@ -19,18 +20,19 @@ export const IconButton = styled.div`
 `;
 
 export const Button = styled.div`
-    background: #000000;
+    background: #fff;
     border-radius: 3px;
     padding: 5px 22px;
     text-align: center;
-    color: white;
+    color: #000;
     font-size: 15px;
     cursor: pointer;
     user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
 
     transition: 0.3s box-shadow;
 
     &:hover {
-        box-shadow: 0 0 15px 8px #00000026;
+        box-shadow: rgba(0, 0, 0, 0.22) 0px 5px 10px;
     }
 `;

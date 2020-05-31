@@ -13,8 +13,8 @@ export const StyledSidebar = styled.div`
     will-change: transform;
     transition-timing-function: cubic-bezier(0.54, 0.01, 0, 0.99);
 
-    backdrop-filter: blur(100px);
-    background-color: #7b7b7b6e;
+    backdrop-filter: blur(30px);
+    background-color: #51515147;
 
     * {
         user-select: none;

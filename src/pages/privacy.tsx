@@ -2,7 +2,7 @@ import React from "react"
 
 const PrivacyPage = () => {
   React.useState(() => {
-    if(typeof(window) !== "undefined") window.location.href = `https://dothq.co/legal/privacy`
+    if(typeof(window) !== "undefined") document.location.replace(`https://dothq.co/legal/privacy`);
   })
 
   return (

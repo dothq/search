@@ -17,7 +17,7 @@ const NotFoundPage = () => {
         <img src={"https://cdn.jsdelivr.net/npm/twemoji@11.0.1/2/svg/1f644.svg"} width={64} />
         <h1 style={{ marginBottom: '8px', fontSize: '4rem', fontWeight: 800 }}>404</h1>
         <p>We couldn't find that page.</p>
-        <Button onClick={goPreviousPage} style={{ width: '241.61px', margin: '0 auto' }}>Return to Previous Page</Button>
+        <Button onClick={goPreviousPage} style={{ width: '241.61px', margin: '0 auto' }}>Return to previous page</Button>
       </div>
     </Layout>
   )

@@ -41,7 +41,7 @@ const Layout = ({ children, isLanding }) => {
   React.useState(() => {
     if(bg !== undefined) return;
 
-    axios.get('https://source.unsplash.com/random/1920x1080', { responseType: 'arraybuffer', maxRedirects: 0 })
+    axios.get('https://source.unsplash.com/featured/1920x1080/?nature', { responseType: 'arraybuffer', maxRedirects: 0 })
       .then(res => {
         const blob = new Blob([res.data]);
         const data = URL.createObjectURL(blob);

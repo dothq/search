@@ -9,6 +9,7 @@ import { navigate } from 'gatsby';
 
 export const Landing = () => {
     let [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
+    const [sv, setSV] = React.useState(false);
 
     const onSearch = () => {
         const sb = (document.getElementById("sb") as HTMLInputElement)
@@ -26,11 +27,22 @@ export const Landing = () => {
 
     React.useState(() => {
         if(typeof(window) !== "undefined") window.addEventListener('keydown', (e) => {
-            if(e.keyCode == 9) {
+            if(e.keyCode === 9) {
+                const sb = document.getElementById('sb');
+
                 e.preventDefault()
 
                 setSidebarVisible(false)
-                document.getElementById('sb').focus()
+
+                if(document.activeElement.id == sb.id) {
+                    document.getElementById('sb').blur()
+                } else {
+                    document.getElementById('sb').focus()
+                }
+            }
+            
+            if((e.target as Element).id == "gatsby-focus-wrapper" || (e.target as Element) == document.body && e.keyCode === 37) {
+                setSidebarVisible(true)
             }
         })
     })

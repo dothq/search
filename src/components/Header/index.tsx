@@ -7,16 +7,16 @@ import { IconButton, Button } from '../Button';
 
 import { useGlobalState } from '../../context'
 
-export const Header = ({ siteTitle }) => {
+export const Header = ({ siteTitle, isLanding }) => {
     const [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
 
     return (
         <StyledHeader>
             <HeaderContainer>
                 <Flexy jc={"flex-start"}>
-                    <IconButton size={32} onClick={() => setSidebarVisible(!sidebarVisible)}>
+                    {isLanding && <IconButton size={32} onClick={() => setSidebarVisible(!sidebarVisible)}>
                         <Icon icon={"menu"} size={18} />
-                    </IconButton>
+                    </IconButton>}
                 </Flexy>
                 <Flexy jc={"flex-end"}>
                     <Button>Sign in</Button>

@@ -21,19 +21,6 @@ export const Logo = styled.div`
     height: 72px;
     background-image: url(/icon_light.png);
     background-size: contain;
-
-    ${({ animate }: { animate: boolean }) => css`
-        animation: ${animate ? `0.3s spin` : ''};
-    `}
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0turn)
-        }
-        100% {
-            transform: rotate(360deg)
-        }
-    }
 `;
 
 export const Searchbox = styled.input`

@@ -8,6 +8,8 @@ import { useGlobalState } from '../../context'
 import { navigate } from 'gatsby';
 
 export const Landing = () => {
+    let [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
+
     const onSearch = () => {
         const sb = (document.getElementById("sb") as HTMLInputElement)
         
@@ -21,6 +23,17 @@ export const Landing = () => {
             onSearch()
         }
     }
+
+    React.useState(() => {
+        if(typeof(window) !== "undefined") window.addEventListener('keydown', (e) => {
+            if(e.keyCode == 9) {
+                e.preventDefault()
+
+                setSidebarVisible(false)
+                document.getElementById('sb').focus()
+            }
+        })
+    })
 
     return (
         <StyledLanding>

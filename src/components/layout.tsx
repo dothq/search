@@ -52,8 +52,8 @@ const Layout = ({ children, isLanding }) => {
   return (
     <div style={{ backgroundImage: isLanding ? `url(${bg})` : `` }} className={"landing-hero"}>
       <CoverSheet visible={sidebarVisible} onClick={() => setSidebarVisible(false)} />
-      <Sidebar enabled={sidebarVisible} />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {isLanding && <Sidebar enabled={sidebarVisible} />}
+      <Header siteTitle={data.site.siteMetadata.title} isLanding={isLanding} />
       <div
         style={{
           margin: `0 auto`,

@@ -31,7 +31,7 @@ export const Sidebar = ({ enabled }: { enabled: boolean }) => {
     const onRefreshWallpaperClick = () => {
         setLoading(true)
 
-        axios.get(`https://source.unsplash.com/nature/1920x1080#${v4()}${Date.now()}`, { responseType: 'arraybuffer', maxRedirects: 0, headers: { 'Cache-Control': 'no-cache' } })
+        axios.get(`https://source.unsplash.com/random/1920x1080?nature#${v4()}${Date.now()}`, { responseType: 'arraybuffer', maxRedirects: 0, headers: { 'Cache-Control': 'no-cache' } })
             .then(res => {
                 const blob = new Blob([res.data]);
                 const data = URL.createObjectURL(blob);

@@ -27,7 +27,7 @@ export const News = () => {
     return (
         <StyledNews>
             <Container style={{ display: 'block' }}>
-                <b>NEWS </b> {news && news[0] && news[0].title} <a onClick={() => loadArticle(news && news[0] && news[0].url)} style={{ color: '#0E8BFF', cursor: 'pointer' }}> Learn more</a>
+                {news && news[0] && news[0].title} <a onClick={() => loadArticle(news && news[0] && news[0].url)} style={{ color: '#0E8BFF', cursor: 'pointer' }}>  -> Learn more</a>
             </Container>
         </StyledNews>
     )

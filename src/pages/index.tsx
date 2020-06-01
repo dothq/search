@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`${IndexStyle}`;
 const IndexPage = () => {
   return (
     <Layout isLanding>
-      <SEO title="Home" />
+      <SEO title={" "} />
       <GlobalStyle />
       <Landing />
     </Layout>

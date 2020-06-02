@@ -36,6 +36,10 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={title === " " ? "Dot Search" : `%s - ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `viewport`,
+          content: `width=device-width, initial-scale=1.0`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },

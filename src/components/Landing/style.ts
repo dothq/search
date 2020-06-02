@@ -4,6 +4,12 @@ export const StyledLanding = styled.div`
     width: 100%;
     height: calc(100vh - 72px);
     display: flex;
+
+    @media screen and (max-width: 800px) {
+        & {
+           height: calc(-webkit-fill-available - 72px);
+        }
+    }
 `;
 
 export const Container = styled.div`
@@ -45,5 +51,11 @@ export const Searchbox = styled.input`
 
     &:focus {
         transform: scale(1.025);
+    }
+
+    @media screen and (max-width: 800px) {
+        & {
+          width: 300px;
+        }
     }
 `;

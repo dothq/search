@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dothq/html-metadata-parser": "^1.0.1",
+    "axios": "^0.19.2",
+    "html-metadata-parser": "^1.0.3",
+    "random-useragent": "^0.3.1",
+    "uuid": "^8.1.0"
+  }
+}

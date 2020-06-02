@@ -7,8 +7,8 @@ app.get('/', (req, res) => {
   res.redirect('https://search.dothq.co')
 })
 
-app.post('/v1/search/:query/:options?', (req, res) => {
-    search(req.params.query, req.params.options ? JSON.parse(decodeURIComponent(req.params.options)) : "").then(resp => {
+app.post('/v1/search', (req, res) => {
+    search(req.body.query, req.body.options ? JSON.parse(req.body.options) : "").then(resp => {
         resp.timeTaken = Date.now() - resp.timeTaken
         res.json(resp)
     })

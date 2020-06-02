@@ -1,4 +1,0 @@
-graft app/static
-graft app/templates
-include requirements.txt
-global-exclude *.pyc

@@ -19,7 +19,7 @@ const SearchResultsPage = ({ location }) => {
             setTitle((parsed.q as string) || "")
 
             if((results as any).query == parsed.q) return;
-            const url = process.env.ENV = 'development' ? 'http://localhost:9015/v1/search' : '/api/v1/search'
+            const url = process.env.ENV == 'development' ? 'http://localhost:9015/v1/search' : '/api/v1/search'
 
             axios.post(url, { query: parsed.q })
                 .then(res => setResults(res.data))

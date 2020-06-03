@@ -9,7 +9,7 @@ export const Style = css`
     }
 
     html {
-        font-family: 'Inter', sans-serif;
+        font-family: system-ui, sans-serif;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         background-repeat: no-repeat;
@@ -213,7 +213,7 @@ export const Style = css`
     }
     body {
         color: hsla(0, 0%, 0%, 0.8);
-        font-family: 'Inter', sans-serif, georgia, serif;
+        font-family: system-ui, sans-serif, georgia, serif;
         font-weight: normal;
         word-wrap: break-word;
         font-kerning: normal;
@@ -243,7 +243,7 @@ export const Style = css`
         padding-top: 0;
         margin-bottom: 1.45rem;
         color: inherit;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
             Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         font-weight: bold;
         text-rendering: optimizeLegibility;
@@ -260,8 +260,8 @@ export const Style = css`
         padding-top: 0;
         margin-bottom: 1.45rem;
         color: inherit;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Inter', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, sans-serif;
         font-weight: bold;
         text-rendering: optimizeLegibility;
         font-size: 1.62671rem;
@@ -277,8 +277,8 @@ export const Style = css`
         padding-top: 0;
         margin-bottom: 1.45rem;
         color: inherit;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Inter', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, sans-serif;
         font-weight: bold;
         text-rendering: optimizeLegibility;
         font-size: 1.38316rem;
@@ -294,8 +294,8 @@ export const Style = css`
         padding-top: 0;
         margin-bottom: 1.45rem;
         color: inherit;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Inter', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, sans-serif;
         font-weight: bold;
         text-rendering: optimizeLegibility;
         font-size: 1rem;
@@ -311,8 +311,8 @@ export const Style = css`
         padding-top: 0;
         margin-bottom: 1.45rem;
         color: inherit;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Inter', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, sans-serif;
         font-weight: bold;
         text-rendering: optimizeLegibility;
         font-size: 0.85028rem;
@@ -328,8 +328,8 @@ export const Style = css`
         padding-top: 0;
         margin-bottom: 1.45rem;
         color: inherit;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, 'Inter', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, system-ui, sans-serif;
         font-weight: bold;
         text-rendering: optimizeLegibility;
         font-size: 0.78405rem;
@@ -636,6 +636,10 @@ export const Style = css`
 
     a {
         text-decoration: none;
+    }
+
+    .se-link:hover { 
+        text-decoration: underline;
     }
 
     .landing-hero {

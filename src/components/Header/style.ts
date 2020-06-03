@@ -14,3 +14,11 @@ export const HeaderContainer = styled.div`
     align-self: center;
     padding: 0 32px;
 `;
+
+export const Logo = styled.div`
+    width: 32px;
+    height: 32px;
+    background-image: url(/icon.png);
+    background-size: contain;
+    margin-right: 15px;
+`;

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { StyledLanding, Container, Logo, Searchbox } from "./style";
+import { StyledLanding, Container, Logo } from './style';
+import { Searchbox } from '../Searchbox';
 import { Button } from '../Button';
 import { News } from '../News';
 

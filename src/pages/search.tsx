@@ -27,7 +27,7 @@ const SearchResultsPage = ({ location }) => {
     })
 
     return (
-        <Layout>
+        <Layout isResults>
             <SEO title={title} />
             <div style={{ textAlign: 'left', margin: '118px' }}>
                 {results !== {} && (

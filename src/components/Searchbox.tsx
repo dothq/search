@@ -41,6 +41,7 @@ export const HeaderSearchbox = styled.input`
   width: 680px;
   font-size: 14px;
   padding-left: 40px;
+  margin-left: 53px;
   background-image: url(/search.svg);
   background-size: 16px;
   background-repeat: no-repeat;

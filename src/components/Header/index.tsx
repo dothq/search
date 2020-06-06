@@ -8,7 +8,7 @@ import { IconButton, Button } from '../Button';
 import { useGlobalState } from '../../context'
 import { HeaderSearchbox } from '../Searchbox';
 
-export const Header = ({ siteTitle, isLanding, isResults }) => {
+export const Header = ({ siteTitle, isLanding, isResults, searchbarPlaceholder }) => {
     const [sidebarVisible, setSidebarVisible] = useGlobalState('sidebarVisible')
     const [sv, setSV] = React.useState(false);
 
@@ -58,6 +58,7 @@ export const Header = ({ siteTitle, isLanding, isResults }) => {
                     {isResults && <Logo />}
                     {isResults && <HeaderSearchbox 
                         placeholder={""} 
+                        value={searchbarPlaceholder}
                         title={"Search"}
                         id={"sb"} 
                         onKeyDown={() => onKeyDown(event)} 

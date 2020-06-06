@@ -13,6 +13,7 @@ export const HeaderContainer = styled.div`
     width: 100%;
     align-self: center;
     padding: 0 32px;
+    padding-left: 50px;
 `;
 
 export const Logo = styled.div`

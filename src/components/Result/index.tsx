@@ -1,7 +1,7 @@
 import React from 'react';
 import { sanitize } from 'dompurify';
 
-import { StyledResult, StyledResultURL, ResultURL, ResultLink, ResultTitle, ResultContent, ResultFavicon } from './style';
+import { StyledResult, StyledResultURL, ResultURL, ResultLink, ResultTitle, ResultContent } from './style';
 
 const cleanHTML = (dirtyHTML) => {
   const html = dirtyHTML.replace(/\[b\]/g, "<b style='font-weight: 600'>").replace(/\[\/b\]/g, "</b>")
@@ -12,7 +12,6 @@ const cleanHTML = (dirtyHTML) => {
 export const Result = ({ result }) => (
   <StyledResult>
     <StyledResultURL>
-      <ResultFavicon favicon={result.favicon}/>
       <ResultURL>{result.url.prettified.join(" > ")}</ResultURL>
     </StyledResultURL>
     <ResultLink href={result.url.url} color={'#1a0dab'}>

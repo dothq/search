@@ -57,7 +57,7 @@ const SearchResultsPage = ({ location }) => {
                     <h5 style={{ marginBottom: '5px', marginLeft: '5px', fontWeight: 'normal' }}>Maps</h5>
                 </div>
                 <div style={{ display: 'flex', marginRight: '20px' }}>
-                    <Icon icon={"image"} size={16}></Icon>
+                    <Icon icon={"more-vertical"} size={16}></Icon>
                     <h5 style={{ marginBottom: '5px', marginLeft: '5px', fontWeight: 'normal' }}>Other</h5>
                 </div>
             </div>

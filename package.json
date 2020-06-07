@@ -35,13 +35,13 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop && cd api && yarn start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve -H 0.0.0.0 -p 3008",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "run": "npm run build && npm run serve"
+    "run": "yarn build && yarn serve"
   },
   "repository": {
     "type": "git",

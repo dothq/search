@@ -17,6 +17,6 @@ export const Result = ({ result }) => (
     <ResultLink href={result.url.url} color={'#1a0dab'}>
       <ResultTitle dangerouslySetInnerHTML={{ __html: cleanHTML(result.title) }} />
     </ResultLink>
-    <ResultContent dangerouslySetInnerHTML={{ __html: cleanHTML(result.content) }} />
+    <ResultContent dangerouslySetInnerHTML={{ __html: cleanHTML(result.content) }} /> 
   </StyledResult>
 )

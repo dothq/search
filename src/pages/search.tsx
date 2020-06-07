@@ -10,6 +10,7 @@ import { useGlobalState } from '../context'
 import { Result } from "../components/Result"
 import { Icon } from "../components/Icon"
 import { parseCIDR } from "ipaddr.js"
+import { Button } from "../components/Button"
 
 
 const SearchResultsPage = ({ location }) => {
@@ -60,6 +61,7 @@ const SearchResultsPage = ({ location }) => {
                     <h5 style={{ marginBottom: '5px', marginLeft: '5px', fontWeight: 'normal' }}>Other</h5>
                 </div>
             </div>
+            <div style={{ display: 'flex' }}>
             <div style={{ textAlign: 'left', margin: '118px', marginTop: '0', marginBottom: '30px', width: '652px' }}>
                 {(results as any).results && (
                     <>
@@ -83,6 +85,18 @@ const SearchResultsPage = ({ location }) => {
                         </div>
                     </>   
                 )}
+            </div>
+            <div style={{ width: '27%', boxShadow: '0px 1px 10px rgba(0, 0, 0, 0.25)', height: '10%', display: 'flex', padding: '20px' }}>
+                <div style={{ width: '72px', height: '72px', backgroundImage: 'url(/icon.png)',backgroundSize: 'contain', backgroundRepeat: 'no-repeat', marginRight: '15px' }} />
+                <div style={{ justifyContent: 'flex-end' }}>
+                    <h4 style={{ fontWeight: 'normal', fontSize: '16px', marginBottom: '4px' }}>Download Dot Browser</h4>
+                    <p style={{ fontSize: '12px', marginBottom: '4px' }}>The privacy-based web browser, with adblock and privacy tools built-in to keep you secure online</p>
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                        <Button style={{ marginRight: '10px' }}>Never Show Again</Button>
+                        <Button style={{ backgroundColor: '#000', color: '#fff' }}>Get</Button>
+                    </div>
+                </div>
+            </div>
             </div>
         </Layout>
     )

@@ -2,7 +2,7 @@ const axios = require("axios")
 const { parse } = require("url")
 const { v4 } = require("uuid");
 
-const { SEARCH_EP_WITH_KEY, AUTOCOMPLETE_EP_WITH_KEY } = require("./ENGINE_KEYS.json")
+const { SEARCH_EP_WITH_KEY, IMAGES_EP_WITH_KEY, VIDEOS_EP_WITH_KEY, NEWS_EP_WITH_KEY, AUTOCOMPLETE_EP_WITH_KEY } = require("./ENGINE_KEYS.json")
 
 var entities = {
     'amp': '&',
@@ -74,7 +74,7 @@ const getUA = () => {
     return orig;
 }
 
-const search = (query, options) => {
+const search = (query, options, engine) => {
     return new Promise((resolve, reject) => {
         const userAgent = getUA() // Generate a random UA for the engine lookup
 
@@ -92,12 +92,21 @@ const search = (query, options) => {
         const language = options.language; // Use the user's specified language or use the default en_US
         const device = 'desktop'
 
-        const engineURL = SEARCH_EP_WITH_KEY
+        const engineList = {
+            'SEARCH': SEARCH_EP_WITH_KEY,
+            'IMAGES': IMAGES_EP_WITH_KEY,
+            'VIDEOS': VIDEOS_EP_WITH_KEY,
+            'NEWS': NEWS_EP_WITH_KEY,
+        }
+
+        const engineURL = engineList[engine]
                             .replace(/%category/, category)
                             .replace(/%device/, device)
                             .replace(/%ss/, safesearch)
                             .replace(/%language/, language)
                             .replace(/%query/, query)
+
+        console.log(engineURL);
 
         axios.get(engineURL, { headers: { 'User-Agent': userAgent } })
             .then(async res => {

@@ -49,7 +49,31 @@ app.get('/', (req, res) => {
 })
 
 app.post('/v1/search', limiter, (req, res) => {
-    search(req.body.query, req.body.options ? JSON.parse(req.body.options) : "").then(resp => {
+    search(req.body.query, req.body.options ? JSON.parse(req.body.options) : "", 'SEARCH').then(resp => {
+        resp.timeTaken = Date.now() - resp.timeTaken
+        resp.query = req.body.query
+        res.json(resp)
+    })
+})
+
+app.post('/v1/search/images', limiter, (req, res) => {
+    search(req.body.query, req.body.options ? JSON.parse(req.body.options) : "", 'IMAGES').then(resp => {
+        resp.timeTaken = Date.now() - resp.timeTaken
+        resp.query = req.body.query
+        res.json(resp)
+    })
+})
+
+app.post('/v1/search/videos', limiter, (req, res) => {
+    search(req.body.query, req.body.options ? JSON.parse(req.body.options) : "", 'VIDEOS').then(resp => {
+        resp.timeTaken = Date.now() - resp.timeTaken
+        resp.query = req.body.query
+        res.json(resp)
+    })
+})
+
+app.post('/v1/search/news', limiter, (req, res) => {
+    search(req.body.query, req.body.options ? JSON.parse(req.body.options) : "", 'NEWS').then(resp => {
         resp.timeTaken = Date.now() - resp.timeTaken
         resp.query = req.body.query
         res.json(resp)
@@ -63,3 +87,4 @@ app.get('/v1/autocomplete/:query', (req, res) => {
 })
 
 app.listen(9015)
+console.log('API started on port 9015')

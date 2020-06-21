@@ -13,7 +13,7 @@ export const News = () => {
 
     React.useState(() => {
         if(news == undefined) {
-            axios.get('https://dothq.co/api/browser.news', { headers: { 'X-Dot-NTP': true } })
+            axios.get('https://dothq.co/api/browser/news', { headers: { 'X-Dot-NTP': true } })
                 .then(res => setNews(res.data.articles))
         }
     })

@@ -1,3 +1,5 @@
+> **DEPRECATION NOTICE** Dot Search has been deprecated, and it will be placed into an archived state. We will revive this eventually...
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://search.dothq.co">
